@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WHLW0Z5M6K"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-WHLW0Z5M6K');
+    </script>
+
+    <meta charset="UTF-8">
+    <title>Documentación | Heroclix Bible For Developers</title>
+
+    <div th:replace="fragments/fragments-html :: head-imports"></div>
+
+    <!--<link rel="stylesheet" type="text/css" th:href="@{/css/home-page/home-page-styles.css}">-->
+
+    <link rel="stylesheet" type="text/css" th:href="@{/css/subpages-styles/doc-styles.css}">
+</head>
+<body>
+<nav th:replace="fragments/fragments-html :: top-nav-menu">
+</nav>
+
+<header class="header">
+    <section class="introduction-section">
+        <h2>Una buena api comienza con una buena documentación.<br> comencémos por aquí</h2>
+    </section>
+</header>
+
+<section class="generic-section">
+    <h3>Introducción</h3>
+    <p>
+        Basados en los principios simples de REST, los endpoint de Heroclix Bible Web API regresan
+        metadatos en JSON acerca de diferentes secciones del juego, como Reglas Completas, ATA's
+        y Erratas directamente desde el catálogo de Heroclix Bible.
+    </p>
+
+    <div class="simple-diagram">
+        <div class="your-app">
+            <i class="fas fa-mobile-alt"></i>
+            <p>Tu aplicación</p>
+        </div>
+        <i class="fas fa-arrows-alt-h"></i>
+        <div class="diagram-heroclix">
+            <i class="fas fa-cloud"></i>
+            <p>Heroclix Bible</p>
+        </div>
+    </div>
+    <p>La dirección base del Web API es https://api.heroclixbible.com. La API suministra un
+        conjunto de endpoints con sus propios path's únicos.</p>
+</section>
+
+<section class="generic-section special-sections">
+    <h3>Requests a HeroclixBible</h3>
+    <p>La API Web de HeroclixBible está basado en REST. Los recursos de datos son accedidos
+        mediante peticiones estándares HTTPS en el formato UTF-8 al endpoint de la API.
+        Los siguientes verbos HTTP están permitidos:</p>
+    <table class="generic-section-table">
+        <tr>
+            <th>MÉTODOS</th>
+            <th>ACCIONES</th>
+        </tr>
+        <tr>
+            <td>GET</td>
+            <td>Devuelve recursos</td>
+        </tr>
+    </table>
+</section>
+
+<section class="generic-section special-sections">
+    <h3>Versionamiento</h3>
+    <p>Esta vez, decidimos comenzar por el principío, y ya que actualmenten esta API está en la versión 1.0.0, todas las
+        peticiones tendrán que llevar en la URL de la petición, la versión actual:</p>
+
+    <table class="generic-section-table">
+        <tr>
+            <th>EJEMPLO</th>
+        </tr>
+        <tr>
+            <td>https://api.heroclixbible.com/v1/</td>
+        </tr>
+    </table>
+</section>
+
+<section class="generic-section special-sections">
+    <h3>Estructura de recursos</h3>
+    <p>La división de recursos tiene 3 niveles los cuales puedes consultar directamente mediante algún
+        endpoint especializado.<br>
+        Los niveles son:</p>
+    <div class="numeral-points">
+        <p>- Secciones</p>
+        <p>- Subsecciones</p>
+        <p>- Nodos</p>
+    </div>
+
+    <div class="subsections-resources-section">
+        <p class="subtitle-subsection">Secciones:</p>
+        <p class="content-subsection">Las secciones son conglomerados de contenido.
+            Lo cual significa que cada sección contiene diferentes apartados para su
+            consulta granula o general.<br><br>
+            La siguiente es una lista de esas secciones:</p>
+    </div>
+
+    <div class="subsection-icons">
+        <div class="subsection-icon">
+            <div>
+                <i class="fas fa-book-open"></i>
+                <p>Reglas rápidas</p>
+            </div>
+        </div>
+        <div class="subsection-icon">
+            <div>
+                <i class="fab fa-superpowers"></i>
+                <p>Poderes y habilidades</p>
+            </div>
+        </div>
+        <div class="subsection-icon">
+            <div>
+                <i class="fas fa-skull"></i>
+                <p>ATAS</p>
+            </div>
+        </div>
+        <div class="cochinada-section">
+            <div class="subsection-icon">
+                <div>
+                    <i class="fas fa-book"></i>
+                    <p>Reglas completas</p>
+                </div>
+            </div>
+            <div class="subsection-icon">
+                <div>
+                    <i class="fas fa-users"></i>
+                    <p>Habilidades de equipo</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Subsections-->
+    <div class="subsections-resources-section">
+        <p class="subtitle-subsection">Subsecciones:</p>
+        <p class="content-subsection">Las sub-secciones es lo que le sigue a las secciones en la jerarquía de
+            recursos. A éstas se les pueden ver como capítulos para cada sección.
+            <br><br>
+            La siguiente es una lista de todas las sub-secciones por cada sección
+            disponibles:</p>
+    </div>
+
+    <div class="subsection-icons ">
+        <div class="subsection-icon ">
+            <div class="less-opacity">
+                <i class="fas fa-book-open"></i>
+                <p>Reglas rápidas</p>
+            </div>
+        </div>
+        <div class="subsection-icon ">
+            <div class="less-opacity">
+                <i class="fab fa-superpowers"></i>
+                <p>Poderes y habilidades</p>
+            </div>
+            <div class="sublist-subsection">
+                <p>- Velocidad</p>
+                <p>- Ataque</p>
+                <p>- Defensa</p>
+                <p>- Daño</p>
+            </div>
+        </div>
+        <div class="subsection-icon ">
+            <div class="less-opacity">
+                <i class="fas fa-skull"></i>
+                <p>ATAS</p>
+            </div>
+        </div>
+        <div class="cochinada-section">
+            <div class="subsection-icon ">
+                <div class="less-opacity">
+                    <i class="fas fa-book"></i>
+                    <p>Reglas completas</p>
+                </div>
+            </div>
+            <div class="subsection-icon ">
+                <div class="less-opacity">
+                    <i class="fas fa-users"></i>
+                    <p>Habilidades de equipo</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Nodos-->
+    <div class="subsections-resources-section">
+        <p class="subtitle-subsection">Nodos:</p>
+        <p class="content-subsection">Los nodos son los elementos individuales propios de cada sub-sección.
+            <br><br>
+            En la siguiente lista, se marcan en verde las sub-secciones que contienen
+            todos los elementos de la propia sub sección:</p>
+    </div>
+
+    <div class="subsection-icons ">
+        <div class="subsection-icon ">
+            <div class="less-opacity">
+                <i class="fas fa-book-open"></i>
+                <p>Reglas rápidas</p>
+            </div>
+        </div>
+        <div class="subsection-icon ">
+            <div class="less-opacity">
+                <i class="fab fa-superpowers"></i>
+                <p>Poderes y habilidades</p>
+            </div>
+            <div class="sublist-subsection green-color-text">
+                <p>- Velocidad</p>
+                <p>- Ataque</p>
+                <p>- Defensa</p>
+                <p>- Daño</p>
+            </div>
+        </div>
+        <div class="subsection-icon ">
+            <div class="less-opacity">
+                <i class="fas fa-skull"></i>
+                <p>ATAS</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="generic-section special-sections">
+    <h3>Lista de endpoints</h3>
+    <p>Mediante la dirección base, puedes construir llamar y solicitudes personalizadas a
+        diferentes recursos mediante la siguiente lista de endpoints con los respectivos verbos
+        HTTP:</p>
+
+    <table class="generic-section-table special-table">
+        <colgroup>
+            <col span="1" style="width: 10%;">
+            <col span="1" style="width: 30%;">
+            <col span="1" style="width: 20%;">
+            <col span="1" style="width: 40%;">
+        </colgroup>
+        <tr>
+            <th>NIVEL</th>
+            <th>ENDPOINT's</th>
+            <th>PARÁMETROS</th>
+            <th>ACCIONES</th>
+        </tr>
+        <tr>
+            <td>Sección</td>
+            <td class="endpoint-table">/v1/sections</td>
+            <td>q</td>
+            <td>Solicita una lista de secciones
+                que coincidan con un String de
+                consulta mediante el
+                parámetro q
+            </td>
+        </tr>
+        <tr>
+            <td>Sección</td>
+            <td>/v1/sections/</td>
+            <td>-</td>
+            <td>Retorna toda la lista de
+                secciones disponibles a partir
+                del lenguaje *
+            </td>
+        </tr>
+        <tr class="last-i">
+            <td>Sección</td>
+            <td>/v1/sections/{acronym}</td>
+            <td>-</td>
+            <td>Retorna una sección a partir de
+                su acrónimo y del lenguaje
+                especificado *
+            </td>
+        </tr>
+        <!--Nivel sección-->
+        <tr>
+            <td>Sub-sección</td>
+            <td>/v1/subsections</td>
+            <td>q</td>
+            <td>Retorna una lista de
+                subsecciones que coincidan
+                con un String de consulta
+                mediante el parámetro q
+            </td>
+        </tr>
+        <tr>
+            <td>Sub-sección</td>
+            <td>/v1/subsections/</td>
+            <td>-</td>
+            <td>Retorna una lista de sub-
+                secciones disponibles a partir
+                del lenguaje especificado *
+            </td>
+        </tr>
+        <tr class="last-i">
+            <td>Sub-sección</td>
+            <td>/v1/subsections/{id}/parent</td>
+            <td>-</td>
+            <td>Retorna el padre (la sección)
+                de la sub-sección mediante la
+                propiedad ID
+            </td>
+        </tr>
+        <tr>
+            <td>Poderes y Habilidades</td>
+            <td>/v1/paa</td>
+            <td>q</td>
+            <td>Solicita una lista de Poderes y
+                Habilidades que coincidan con
+                un String de consulta mediante
+                el parámetro q *
+            </td>
+        </tr>
+        <tr>
+            <td>Poderes y Habilidades</td>
+            <td>/v1/paa/{id}</td>
+            <td>-</td>
+            <td>Retorna un elemento que concida con el id que se solicitó</td>
+        </tr>
+    </table>
+    <p style="margin-bottom: 3rem">Para los elementos marcados con un asterisco se requieren más datos para una
+        respuesta adecuada. Vea la sección
+        <a href="#headers-http" style="color: white">Cabeceras HTTP en las peticiones.</a></p>
+</section>
+
+<section class="generic-section special-sections" id="headers-http">
+    <h3>Cabeceras HTTP en las peticiones</h3>
+    <p>Siguiendo con las especificaciones REST, en algunas consultas se deben añadir algunas
+        cabeceras HTTP para que se pueda retornar un completo o mejor conjunto de resultaros.
+        La siguiente es una lista de endpoint's que necesitan ciertas cabeceras:</p>
+    <table class="generic-section-table special-table">
+        <colgroup>
+            <col span="1" style="width: 10%;">
+            <col span="1" style="width: 30%;">
+            <col span="1" style="width: 20%;">
+            <col span="1" style="width: 40%;">
+        </colgroup>
+        <tr>
+            <th>NIVEL</th>
+            <th>ENDPOINT's</th>
+            <th>CABECERAS</th>
+            <th>VALORES</th>
+        </tr>
+        <tr>
+            <td>Sección</td>
+            <td class="endpoint-table">/v1/sections/</td>
+            <td>Accept-Language</td>
+            <td><a href="#lang-list">Ver lista de valores disponibles</a></td>
+        </tr>
+        <tr class="last-i">
+            <td>Sección</td>
+            <td class="endpoint-table">/v1/sections/{acronym}</td>
+            <td>Accept-Language</td>
+            <td><a href="#lang-list">Ver lista de valores disponibles</a></td>
+        </tr>
+        <tr>
+            <td>Sub-sección</td>
+            <td>/v1/subsections/</td>
+            <td>Accept-Language</td>
+            <td><a href="#lang-list">Ver lista de valores disponibles</a></td>
+        </tr>
+        <tr>
+            <td>Sub-sección</td>
+            <td>/v1/subsections?q</td>
+            <td>Accept-Language *</td>
+            <td><a href="#lang-list">Ver lista de valores disponibles</a></td>
+        </tr>
+    </table>
+    <p style="margin-bottom: 3rem">
+        Para los elementos marcados con un astericos, las cabeceras son opcionales.
+    </p>
+</section>
+
+<section class="generic-section special-sections" id="lang-list">
+    <h3>Lista de idiomas disponibles</h3>
+    <p>La siguiente, es una lista de idiomas disponibles hasta el momento de ahora. Se seguirá
+        traduciendo el contenido y se irán añadiendo esos idiomas, a la lista de idiomas disponibles.
+        La siguiente tabla también tiene información para ser usada en ciertas peticiones:</p>
+    <table class="generic-section-table special-table">
+        <tr>
+            <th>ABREVIACIÓN</th>
+            <th>IDIOMA</th>
+            <th>NIVELES TRADUCIDOS/DISPONIBLES</th>
+        </tr>
+        <tr>
+            <td>es</td>
+            <td>Español</td>
+            <td>Poderes y Habilidades<br>
+                ATA's
+            </td>
+        </tr>
+        <tr>
+            <td>en</td>
+            <td>Inglés</td>
+            <td>Poderes y Habilidades<br>
+                ATA's<br>
+                Habilidades de Equipo<br>
+                Reglas completas<br>
+                Reglas rápidas<br>
+            </td>
+        </tr>
+    </table>
+    <p style="margin-bottom: 3rem">Para los casos en los que se necesiten enviar cabeceras HTTP adicionales para
+        especificar el
+        idioma, se debe añadir la abreviatura a la cabecera solicitada.</p>
+</section>
+
+<footer th:replace="fragments/fragments-html :: footer"></footer>
+
+</body>
+</html>

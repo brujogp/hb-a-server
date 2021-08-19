@@ -1,0 +1,38 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="head-imports">
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bangers&family=Bebas+Neue&family=Fjalla+One&family=Roboto:wght@400;700;900&display=swap"
+          rel="stylesheet">
+    <script src="https://kit.fontawesome.com/37810094fe.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/normalize.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+
+    <title>Home | Heroclix Bible For Developers</title>
+</div>
+
+<nav class="logo" th:fragment="top-nav-menu">
+    <a href="/" style="display: inline-block"><h1>HEROCLIX BIBLE <span class="span sub-logo">FOR DEVELOPERS</span></h1></a>
+
+    <ul class="menu-nav">
+        <a class="a-hom" href="/">Inicio</a>
+        <a class="a-dis" href="#">Descubre</a>
+        <a class="a-doc" href="/docs">Documentación</a>
+        <a class="a-use" href="#">Casos de uso</a>
+
+    </ul>
+</nav>
+
+<nav class="footer" th:fragment="footer">
+    <a th:href="@{https://www.heroclixbible.com/}"><i class="fas fa-home"></i></a>
+    <a href=""><i class="fab fa-facebook"></i></a>
+    <a href=""><i class="fab fa-twitter"></i></a>
+
+    <div class="internal-pages-nav">
+        <a href="/credits">Créditos</a>
+        <a  href="/docs">Documentación</a>
+        <a href="#">Casos de uso</a>
+    </div>
+    <p>© 2020 HeroclixBible</p>
+</nav>
+</html>

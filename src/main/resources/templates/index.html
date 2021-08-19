@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WHLW0Z5M6K"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-WHLW0Z5M6K');
+    </script>
+
+    <div th:replace="fragments/fragments-html :: head-imports"></div>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/subpages-styles/home-page-styles.css}">
+</head>
+
+<body>
+<nav th:replace="fragments/fragments-html :: top-nav-menu">
+</nav>
+<header class="header">
+    <section class="introduction-section">
+        <h2>Construye lo que quieras con la más grande<br>recopilación de datos sobre Heroclix</h2>
+        <a href="/documentation">¿Comenzamos?</a>
+    </section>
+</header>
+
+<section class="generic-section">
+    <h3>Acerca de</h3>
+    <p>
+        Heroclix Bible For Developers es un proyecto para dar la posibilidad a los desarrolladores de
+        todo el mundo de acceder al más grande conjunto de información sobre Heroclix en
+        diferentes idiomas.<br><br>
+
+        En resumen, ésta es una API RestFul que soporta JSON la cual te permite hacer consultas a
+        través de diferentes clientes en diferentes plataformas.
+    </p>
+
+
+    <div class="container-sections">
+        <div class="examples-sections">
+            <i class="fab fa-superpowers"></i>
+            <h4>Búsqueda de poderes y Habilidades</h4>
+            <p>Con la consulta correcta, puedes
+                recuperar, ordenar y formatear todas
+                las secciones de Poderes y
+                Habilidades, además de todos
+                metadatos.</p>
+            <a href="#">Saber más</a>
+        </div>
+
+        <div class="examples-sections">
+            <i class="fas fa-skull"></i>
+            <h4>Todas las atas que quieras</h4>
+            <p>¿Recuerdas esa ATA que no
+                encontraste?<br>
+                Seguramente nosotros la tengamos.
+                Prueba haciendo consultas sobre ese
+                recurso.</p>
+            <a href="#">Saber más</a>
+
+        </div>
+
+        <div class="divisor"></div>
+
+        <div class="examples-sections">
+            <i class="fas fa-book-open"></i>
+            <h4>Reglas rápidas y más allá</h4>
+            <p>¿Quieres incluir reglas rápidas?
+                No hay problema, haz consultas
+                especificas para recuperar lo que
+                necesites.</p>
+            <a href="#">Saber más</a>
+        </div>
+
+        <div class="examples-sections">
+            <i class="fas fa-ellipsis-h"></i>
+            <h4>¿Quieres más?</h4>
+            <p>Descubre todo lo que puedes hacer con esta API y documéntate sobre ella.<br><br>¡Comienza a cargar
+                nuestros servidores!</p>
+            <a href="#">¿Cómenzamos?</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div th:replace="fragments/fragments-html :: footer"></div>
+</footer>
+
+</body>
+</html>

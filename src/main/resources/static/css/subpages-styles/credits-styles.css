@@ -1,0 +1,89 @@
+.header {
+    position: relative;
+    height: 100vh;
+    background-image: url("../../images/credits-background.jpg");
+    background-position: center;
+    background-size: 100%;
+}
+
+.header:after {
+    content: '';
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.33) 100%);
+    background-position: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.introduction-section {
+    color: white;
+    position: absolute;
+    bottom: 1rem;
+    font-family: 'Bangers', cursive;
+    width: 100%;
+    vertical-align: center;
+    padding: 0 3rem;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.introduction-section h2 {
+    font-size: 2.5rem;
+}
+
+.credit-details {
+    margin-top: 2.5rem;
+    text-align: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, auto);
+}
+
+.name {
+    font-size: 3.5rem!important;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.separator {
+    height: 100%;
+    background-color: #383A59;
+    border: 2px solid black;
+    width: 8%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.credit-section {
+    max-width: 90%;
+    margin: 0 auto 3rem auto;
+    text-align: center;
+}
+
+.credit-details p {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.credit-details a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.credit-details img {
+    width: 100%;
+    padding: 2rem 3rem;
+}
+
+.vato-description{
+   font-family: 'Roboto', sans-serif!important;
+    font-size: 1.3rem!important;
+    text-align: left!important;
+    line-height: 1.6rem;
+}

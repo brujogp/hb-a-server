@@ -1,0 +1,294 @@
+.header {
+    position: relative;
+    background-image: url("../../images/doc-background.jpg");
+    height: 100vh;
+    background-size: 100%;
+    background-clip: inherit;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header:after {
+    content: '';
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.33) 100%);
+    background-position: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.introduction-section {
+    color: white;
+    position: absolute;
+    bottom: 1rem;
+    font-family: 'Bangers', cursive;
+    width: 100%;
+    vertical-align: center;
+    padding: 0 3rem;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.introduction-section h2 {
+    font-size: 2.5rem;
+}
+
+.simple-diagram {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 16rem);
+    max-width: 50%;
+    margin: 1.5rem auto;
+    text-align: center;
+}
+
+.simple-diagram div {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    border-radius: 2rem;
+}
+
+.simple-diagram div i {
+    margin-top: 2rem;
+    font-size: 4rem;
+}
+
+.simple-diagram div p {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.your-app {
+    background-color: #383A59;
+}
+
+.your-app i {
+    color: #282A36;
+}
+
+.your-app p {
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.fa-arrows-alt-h {
+    margin-top: 4rem;
+    font-size: 6rem;
+    color: #383A59;
+}
+
+.diagram-heroclix {
+    background-color: #50fa7b;
+    color: #282A36;
+}
+
+.diagram-heroclix p {
+    font-family: 'Bebas Neue', cursive;
+}
+
+.special-sections {
+    text-align: left !important;
+    margin-top: 3.5rem !important;
+}
+
+.special-sections h3 {
+    margin-left: 5rem !important;
+}
+
+.generic-section-table {
+    margin-left: 5rem;
+    margin-top: 2rem;
+    border-collapse: separate;
+    border-spacing: 50px 0;
+    position: relative;
+}
+
+.generic-section-table:after {
+    content: '';
+    position: absolute;
+    top: 2rem;
+    width: 90%;
+    border-bottom: 1px solid white;
+}
+
+.generic-section-table th {
+    font-size: 1.4rem;
+    padding-bottom: 2rem;
+}
+
+.generic-section-table td {
+    font-size: 1.2rem;
+}
+
+.numeral-points {
+    padding-left: 5rem;
+    margin-bottom: 3rem;
+}
+
+
+.numeral-points p:first-of-type {
+    margin-top: 1.5rem;
+}
+
+.numeral-points p {
+    margin-top: .7rem;
+    margin-bottom: 5px;
+}
+
+.subsections-resources-section {
+    max-width: 90%;
+    margin: 2rem auto 0 auto;
+}
+
+.subtitle-subsection {
+    margin-bottom: 2rem !important;
+    font-size: 2rem !important;
+    font-weight: 700;
+}
+
+.content-subsection {
+    padding-left: 1.2rem;
+
+}
+
+.subsection-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 3rem auto !important;
+    text-align: center;
+    max-width: 90%;
+}
+
+.subsection-icon {
+    text-align: center !important;
+    width: 19rem;
+    height: auto;
+    align-items: center;
+    background-color: #383A59;
+    border: 2px solid black;
+    margin-bottom: 2rem;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+.subsection-icon div {
+    position: relative;
+}
+
+.subsection-icon div:after {
+    content: '';
+    position: absolute;
+    bottom: -.5rem;
+    width: 90%;
+    border: 1px solid white;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+.subsection-icon div i {
+    margin-bottom: 1.2rem;
+}
+
+.subsection-icon div p {
+    text-align: center;
+    font-family: 'Bangers', cursive;
+    font-size: 1.6rem !important;
+}
+
+.cochinada-section {
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+
+    justify-content: space-between;
+}
+
+.cochinada-section .subsection-icon:first-of-type {
+    margin-right: 3rem !important;
+}
+
+.less-opacity {
+    opacity: 0.4;
+}
+
+.sublist-subsection {
+    margin-top: 1.5rem !important;
+}
+
+.sublist-subsection p {
+    font-family: 'Roboto', sans-serif !important;
+    text-align: left !important;
+    margin-left: 3.5rem !important;
+    margin-bottom: 10px !important;
+}
+
+.green-color-text {
+    color: #50fa7b !important;
+}
+
+.special-table td {
+    margin-left: 0 !important;
+    border-spacing: 80px 0 !important;
+    vertical-align: top;
+    padding-bottom: 2rem !important;
+    position: relative;
+}
+
+.special-table a {
+    color: white;
+
+}
+
+.endpoint-table {
+    width: 5rem;
+}
+
+.divition {
+    width: 100%;
+    border: 1px solid white;
+}
+
+/*
+.last-item-list {
+    position: relative;
+}
+
+.last-item-list {
+    content: '';
+    position: absolute;
+    width: 80%;
+    bottom: -3px;
+    border-bottom: 1px solid white;
+    margin: 0 auto;
+    text-align: center;
+    left: 0;
+    right: 0;
+}
+*/
+.last-i td {
+    position: relative;
+}
+
+.last-i td:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    bottom: 1.5rem;
+    border-bottom: 1px solid white;
+    margin: 0 auto;
+    text-align: center;
+    left: 0;
+    right: 0;
+}
+
+.a-doc {
+    border-bottom: 1px solid #50fa7b!important;
+}

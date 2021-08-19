@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WHLW0Z5M6K"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-WHLW0Z5M6K');
+    </script>
+
+    <title>Créditos | HeroclixBible</title>
+    <div th:replace="fragments/fragments-html :: head-imports"></div>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/subpages-styles/credits-styles.css}">
+</head>
+<body>
+<nav th:replace="fragments/fragments-html :: top-nav-menu">
+</nav>
+
+<header class="header">
+    <section class="introduction-section">
+        <h2>Créditos y agradecimientos</h2>
+    </section>
+</header>
+
+<section class="generic-section credit-section">
+    <h3>Créditos</h3>
+    <p>
+        Heroclix Bible, Heroclix Bible For Developers y todas las páginas y aplicaciones bajo la marca
+        HeroclixBible, fueron creadas con mucho amor, por:
+    </p>
+
+    <div class="credit-details">
+        <div class="joctan">
+            <p class="name">Bruno Joctán</p>
+            <a href="https://twitter.com/BrujoGP" target="_blank">@BrujoGP</a>
+            <img src="https://cdn.heroclixbible.com/images/develop-page/jg.png" alt="joctan">
+            <p class="vato-description" >Soy un vato obsesionado con la
+                informática, además de ser un poquito
+                nerd...<br>
+                Era la persona perfecta para haber sido el
+                programador de todo esto BD</p>
+        </div>
+        <div class="separator"></div>
+        <div class="rodrigo">
+            <p class="name">Rodrigo Torices</p>
+            <a href="https://www.instagram.com/rodsuniv/" target="_blank">rodsuniv</a>
+            <img src="https://cdn.heroclixbible.com/images/develop-page/ro.png" alt="rodrigo">
+            <p class="vato-description">Ammmm... ¿Cuack? <br>La verdad no sé qué poner.
+                El vato de mi derecha me dijo que me decribiera
+                o que dijera algo chistoso, pero como que ahorita no ando en el mood :D</p>
+        </div>
+
+    </div>
+
+
+</section>
+
+<footer th:replace="fragments/fragments-html :: footer"></footer>
+</body>
+</html>
